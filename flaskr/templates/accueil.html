@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<img src="static/images/banner2.png" class="img-fluid" alt="Responsive header image">
+{% endblock %}
+
+{% block content %}
+<!-- Content  -->
+<section id="elements" class="container">
+  {% for nom, label in data %}
+<!-- Elements de la section -->
+  <div id="elt-{{loop.index0}}">
+    <a href="{{nom}}" >
+      <img id="img-{{loop.index0}}" class="image" src="static/images/section_{{nom}}.png" class="img-fluid mx-auto" alt="{{nom}}">
+      <h3>{{label}}</h3>
+    </a>
+  </div>
+  {% endfor %}
+  
+</section>        
+{% endblock %} 
